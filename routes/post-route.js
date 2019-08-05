@@ -9,7 +9,7 @@ module.exports = function(app) {
     // Post route
     app.post('/api/post', function(req, res) {
         console.log(req.body);
-        console.log(req.body);
+        
         res.send("Thank you again!!");
     })
 }
