@@ -3,6 +3,10 @@
 const db = require('../models/post-model');
 
 module.exports = function(app) {
+    // Home route
+    app.get('/', function(req, res) {
+        res.render("index");
+    })
     // Get route
 
 
