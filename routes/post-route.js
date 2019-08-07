@@ -7,8 +7,10 @@ module.exports = function(app) {
     app.get('/', function(req, res) {
         res.render("index");
     })
-    // Get route
-
+    // Second Page
+    app.get('/myevaluation', function(req, res) {
+        res.render("myeval");
+    })
 
     // Post route
     app.post('/api/post', function(req, res) {
