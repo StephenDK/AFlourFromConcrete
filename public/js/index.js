@@ -1,14 +1,16 @@
 
 
 function submitData() {
-    var description = document.getElementById("getData").value;
+    var description = document.getElementById("getData")
 
     $.ajax({
         type: "POST",
         url: "/api/post",
         data: {
-            userText: description
+            userText: description.value
         }
     })
+
     console.log("JSON posted");
+    description.value = "";
 }
