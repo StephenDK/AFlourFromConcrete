@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const Keys = require("./config/keys");
 
 // Require db model
 require('./models/post-model');
@@ -23,7 +24,7 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-var MONGODB_URI = "Replace me";
+var MONGODB_URI = Keys.dbKey;
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true

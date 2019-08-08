@@ -15,15 +15,26 @@ module.exports = function(app) {
     // last page
     app.get('/yourturn', function(req, res) {
         // get database querys
-
+       
         res.render("submit");
+    })
+
+    app.get('/replies', function(req, res) {
+        db.find({})
+        .then(function(dbPosts) {
+            console.log(dbPosts);
+            var hbsObject = {
+                data: dbPosts
+            }
+            res.render('replies', hbsObject);
+        })
     })
 
     // Post route
     app.post('/api/post', function(req, res) {
-        console.log(req.body);
+        console.log(req.body.userText);
         db.create({
-            description: req.body.description
+            description: req.body.userText
         })
         .then( function(newPost) {
             console.log(newPost);
