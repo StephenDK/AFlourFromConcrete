@@ -27,8 +27,15 @@ body {
     height: 400px;
     width: 100%;
 }
+.centerIt {
+    text-align: center;
+}
 
+.text {
+    padding: 15px;
+}
 /* Pgae 3 */
+
 
 /* page 4 */
 #getData {
