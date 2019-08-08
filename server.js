@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const Keys = require("./config/keys");
+//const Keys = require("./config/keys");
 
 // Require db model
 require('./models/post-model');
