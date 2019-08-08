@@ -10,8 +10,8 @@ body {
 }
 
 
-img {
-    height: 200px;
+.img1 {
+    height: 300px;
     width: 100%;
     
 }
@@ -19,4 +19,11 @@ img {
     display: inline-block;
     width: 400px;
     padding: 5px;
+}
+
+
+/* Page 2 */
+.img2 {
+    height: 400px;
+    width: 100%;
 }

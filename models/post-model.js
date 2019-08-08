@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
     // Add the schema information here.
-    name: String,
     description: String
 })
 

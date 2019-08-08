@@ -12,10 +12,25 @@ module.exports = function(app) {
         res.render("myeval");
     })
 
+    // last page
+    app.get('/yourturn', function(req, res) {
+        // get database querys
+
+        res.render("submit");
+    })
+
     // Post route
     app.post('/api/post', function(req, res) {
         console.log(req.body);
-        
-        res.send("Thank you again!!");
+        db.create({
+            description: req.body.description
+        })
+        .then( function(newPost) {
+            console.log(newPost);
+        })
+        .catch(function(err) {
+            console.log(err);
+        })
+       
     })
 }
